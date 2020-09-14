@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  Contacts
+//  defualtCollectionView
 //
-//  Created by Hy Horng on 9/8/20.
+//  Created by Hy Horng on 9/13/20.
 //  Copyright © 2020 Hy Horng. All rights reserved.
 //
 
