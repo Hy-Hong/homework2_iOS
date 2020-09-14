@@ -9,9 +9,11 @@
 import UIKit
 
 class ViewController: UIViewController {
-        fileprivate let collectionView: UICollectionView = {
+    
+    fileprivate let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
             layout.scrollDirection = .horizontal
+        
         let cell = UICollectionView(frame: .zero, collectionViewLayout: layout)
         cell.translatesAutoresizingMaskIntoConstraints = false
         cell.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cellId")
@@ -27,9 +29,9 @@ class ViewController: UIViewController {
         
         view.addSubview(collectionView)
         collectionView.backgroundColor = .white
-        collectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 40).isActive = true
-        collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40).isActive = true
-        collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40).isActive = true
+        collectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0).isActive = true
+        collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0).isActive = true
+        collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0).isActive = true
         collectionView.heightAnchor.constraint(equalTo: collectionView.widthAnchor, multiplier: 0.5).isActive = true
     }
     

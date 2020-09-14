@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ButtonCollectionViewCell" customModule="defualtCollectionView" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="225" height="213"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="225" height="213"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fmr-YV-fLK">
+                        <rect key="frame" x="0.0" y="183" width="225" height="30"/>
+                        <color key="backgroundColor" red="0.39551246169999998" green="0.76873558760000005" blue="0.39994865660000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="EL9-MC-mI4"/>
+                        </constraints>
+                        <state key="normal" title="Click Me"/>
+                    </button>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="O0G-Yf-Djb">
+                        <rect key="frame" x="0.0" y="0.0" width="225" height="183"/>
+                        <color key="backgroundColor" red="0.98431372549999996" green="0.63529411759999999" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="O0G-Yf-Djb" secondAttribute="trailing" id="9gG-wD-rJB"/>
+                <constraint firstItem="Fmr-YV-fLK" firstAttribute="top" secondItem="O0G-Yf-Djb" secondAttribute="bottom" id="B4O-Wr-cfI"/>
+                <constraint firstAttribute="trailing" secondItem="Fmr-YV-fLK" secondAttribute="trailing" id="Ig7-np-C8H"/>
+                <constraint firstAttribute="bottom" secondItem="Fmr-YV-fLK" secondAttribute="bottom" id="Sd2-WJ-4iC"/>
+                <constraint firstItem="Fmr-YV-fLK" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="czc-7h-lkC"/>
+                <constraint firstItem="O0G-Yf-Djb" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="jzo-GL-Gf9"/>
+                <constraint firstItem="O0G-Yf-Djb" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="lYW-De-Ikr"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="225" height="213"/>
+            <connections>
+                <outlet property="btnClickMe" destination="Fmr-YV-fLK" id="tEF-jH-Hfe"/>
+            </connections>
+            <point key="canvasLocation" x="263.04347826086956" y="207.25446428571428"/>
+        </collectionViewCell>
+    </objects>
+</document>

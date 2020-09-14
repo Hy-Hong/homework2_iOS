@@ -8,31 +8,40 @@
 
 import UIKit
 
-class headerCollectionReusableView: UICollectionReusableView {
+class HeaderCollectionReusableView: UICollectionReusableView {
     
-   static let identifire = "headerCollection"
+    static let identifire = "headerCollection"
     
-   private let label: UILabel = {
+    private let label: UILabel = {
         let label = UILabel()
-        label.text = "header"
-        label.textAlignment = .center
+        label.textAlignment = .left
         label.textColor = .white
-    return label
+        return label
     }()
     
-    public func configure(){
+    public func configure(sectionNumber: String){
         backgroundColor = .blue
-        addSubview(label)
+        label.text = "Header Section \(sectionNumber)"
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        label.frame = bounds
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         
+        self.addSubview(label)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.topAnchor.constraint(equalTo: self.topAnchor, constant: 0).isActive = true
+        label.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 0).isActive = true
+        label.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 16).isActive = true
+        label.rightAnchor.constraint(equalTo: self.rightAnchor, constant: 0).isActive = true
+        
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 }
 
-class footerCollectionReusableView: UICollectionReusableView {
+class FooterCollectionReusableView: UICollectionReusableView {
     
     static let identifire = "footerCollection"
     
